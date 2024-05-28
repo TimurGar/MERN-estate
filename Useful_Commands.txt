@@ -3,3 +3,9 @@ Done. Now run:
   cd client
   npm install
   npm run dev
+
+  Responsiveness in Tailwind:
+  first write mobile and then other
+  EX:
+  "w-24 sm:w-64"
+  Set the width to 24 and for small devices and UP set to 64
