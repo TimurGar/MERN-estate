@@ -1,7 +1,7 @@
 import User from "../models/user.model.js";
 import bcryptjs from "bcryptjs";
 
-export const signup = async (req, res) => {
+export const signup = async (req, res, next) => {
   console.log(req.body);
 
   // saving the date received after the POST request
@@ -18,8 +18,8 @@ export const signup = async (req, res) => {
     //(we had to change the signup function to async)
     await newUser.save();
     res.status(201).json("User created succefully");
+  
   } catch (error) {
-    res.status(500).json(error.message);
-  };
-
+    next(error);
+  }
 };
