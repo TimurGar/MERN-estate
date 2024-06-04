@@ -40,7 +40,7 @@ export default function SignUp() {
       setError(null);
       navigate("/sign-in");
     } catch (error) {
-      setLoading(false);
+      setLoading(false) ;
       setError(data.message);
     }
   };
